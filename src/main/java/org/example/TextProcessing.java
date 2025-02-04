@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public class TextProcessing {
 
     public static String removeChar(String givenText, String searchText){
@@ -9,14 +11,15 @@ public class TextProcessing {
 
     public static Boolean checkPalindrome(String text){
         String[] characterText = text.split("");
-        
+
         boolean isPalindrome = false;
         
-        for (int i = 0; i < characterText.length / 2; i++) {
-            if (characterText[i] == characterText[characterText.length - i]){
-                isPalindrome = true;
-            } else {
+        for (int i = 0; i < (characterText.length / 2); i++) {
+            if (!Objects.equals(characterText[i], characterText[characterText.length - 1 - i])){
                 isPalindrome = false;
+                break;
+            } else {
+                isPalindrome = true;
             }
         }
         

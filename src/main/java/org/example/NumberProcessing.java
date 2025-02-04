@@ -2,7 +2,7 @@ package org.example;
 
 public class NumberProcessing {
 
-    public static double fahrenheitToCelcius(double temperature){
+    public static double fahrenheitToCelsius(double temperature){
         return (temperature - 32) / 9 * 5;
     }
 
